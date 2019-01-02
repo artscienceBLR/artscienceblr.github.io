@@ -1,0 +1,46 @@
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+            <h2>About</h2>
+            <div>
+            ArtScience BLR is a public laboratory at Srishti Institute of Art, Design and Technology.
+            <img src="http://srishti.ac.in/sites/default/files/srishti-logo-final.png">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="{{ site.baseurl }}/contact/">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>Events</h2> 
+            <ul>
+                {% assign post = site.categories.event | limit: 1 %}
+                {% if post and post[0].event_date %}
+                {% assign byEventDate = site.categories.event | sort: 'event_date' %}
+                {% for post in byEventDate limit: 3 %}
+                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} {% include date.html date=post.event_date %}</a></li>
+                {% endfor %}
+                <li><a href="{{ site.baseurl }}/calendar/">Calendar of Events</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/artscienceblr/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://twitter.com/artscienceblr"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://instagram.com/artscienceblr"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script charset="utf-8" src="{{ site.baseurl }}/assets/js/app.js"></script>
+    

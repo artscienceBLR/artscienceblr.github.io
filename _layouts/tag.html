@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="tag">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Posts tagged: {{ page.tag }}</h2>
+            </div>
+        </div>
+        <div class="row">
+            {% for post in site.tags[page.tag] %} 
+            <div class="col-md-6">
+                {% if post.image %}
+                <img class="img-responsive" src="{{ site.baseurl }}{{ post.image }}" >
+                {% endif %}
+                <a href="{{ site.baseurl }}{{ post.url }}"><h4>{{ post.title }}</h4></a> {{ post.date | date_to_string }}
+                {{ post.excerpt }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

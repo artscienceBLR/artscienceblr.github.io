@@ -1,0 +1,57 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    {% if site.tags != "" %}
+        {% include collecttags.html %}
+    {% endif %}
+    {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt | strip_html }}" />
+    <meta property="og:description" content="{{ page.excerpt | strip_html }}" />
+    {% elsif page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    {% endif %}
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ page.title }}" />
+
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <meta property="og:site_name" content="(Art)ScienceBLR" />
+
+    {% if page.tags %}
+        {% for tag in page.tags %}
+    <meta property="article:tag" content="{{ tag }}" />
+        {% endfor %}
+    {% endif %}
+    {% if page.event_date %}
+    <script type="application/ld+json">
+        {
+            "@context": "http://www.schema.org",
+            "@type": "Event",
+            "name": "page.title",
+            "startDate": "{{ page.event_date }}",
+            "location": {
+                "@type": "Place",
+                "name": "{{ page.location_name }}",
+                "address": "{{ page.location }}"
+            },
+            "performer": [
+            {% for performer in page.performers %}
+                {
+                "@type": "{{ performer.type }}",
+                "name": "{{ performer.name }}",
+                "sameAs": "{{ performer.url }}"
+                }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+            ]
+        }
+    </script>
+    {% endif %}
+    <!-- seo plugin -->
+    {% seo %}
+</head>
+

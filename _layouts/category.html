@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<section class="{{ page.type }}-jumbo">
+    <div class="container-fluid">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6 offset-md-2">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="{{ page.type }}s">
+    <div class="container-fluid">
+        <div class="row">
+            {% for post in site.categories[page.type] %}
+            <div class="col-md-6">
+                {% if post.image %}
+                <img src="{{ site.baseurl }}{{ post.image }}">
+                {% endif %}
+                <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+                {{ post.excerpt }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

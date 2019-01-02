@@ -1,0 +1,23 @@
+title: Art Science BLR
+description: A public laboratory for arts and the sciences.
+author: artscienceblr
+url: http://artscienceblr.github.io/
+excerpt_separator: <!--more-->
+#baseurl: /beta
+paginate: 10
+paginate_path: /page/:num/
+
+exclude: [
+    'Makefile',
+    'Gemfile',
+    'Gemfile.lock',
+    'README.md'
+]
+
+sass:
+    sass_dir: assets/css
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate

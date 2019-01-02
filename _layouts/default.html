@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#"> 
+    {%- include head.html -%}
+    <body>
+        {%- include header.html -%}
+
+        {{ content }}
+
+        {% capture difference %}{{ page.tags | size | minus: 1 }}{% endcapture %}
+        {% if difference != '-1' %}
+        <section class='tags'>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 offset-md-1">
+                    <h4>Tags:</h4>
+                    {% for tag in page.tags %}
+                        {% capture tag_name %}{{ tag }}{% endcapture %}
+                        <a href="{{ site.baseurl }}/tag/{{ tag_name }}"><code class="highlighter-rouge">{{ tag_name }}</code></a>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        {%- include footer.html -%}
+  </body>
+</html>

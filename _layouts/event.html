@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<section class="event">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{ page.title }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% if page.event_date %}
+            <div class="col-md-4">
+                {% include date.html date=page.event_date %}
+            </div>
+            {% endif %}
+        </div>
+        {% if page.image %}
+        <div class="row">
+            <div class="col-md-4"><img src="{{ site.baseurl }}{{ page.image }}"></div>
+        </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-12">{{ content }}</div>
+        </div>
+    </div>
+</section>
+
