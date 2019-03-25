@@ -17,7 +17,7 @@ layout: default
             {% for post in site.categories[page.type] %}
             <div class="col-md-6">
                 {% if post.image %}
-                <img src="{{ site.baseurl }}{{ post.image }}">
+                <img src="{{ site.baseurl }}{{ post.image }}" style="max-width: 320px;">
                 {% endif %}
                 <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
                 {{ post.excerpt }}

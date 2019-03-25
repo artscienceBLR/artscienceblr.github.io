@@ -10,11 +10,16 @@ layout: default
             </div>
         </div>
         <div class="row">
-            {% if page.event_date %}
             <div class="col-md-4">
-                {% include date.html date=page.event_date %}
-            </div>
+            <b>
+            {% if page.event_date %}
+                <!--{% include date.html date=page.event_date %} -->
+                {{ page.event_date | date_to_long_string }}
+            {% else %}
+                {{ page.date | date_to_long_string }}
             {% endif %}
+            </b>
+            </div>
         </div>
         {% if page.image %}
         <div class="row">

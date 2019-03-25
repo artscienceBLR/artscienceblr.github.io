@@ -12,7 +12,7 @@ layout: default
             {% for post in site.tags[page.tag] %} 
             <div class="col-md-6">
                 {% if post.image %}
-                <img class="img-responsive" src="{{ site.baseurl }}{{ post.image }}" >
+                <img class="img-responsive" src="{{ site.baseurl }}{{ post.image }}"  style="max-width: 320px;">
                 {% endif %}
                 <a href="{{ site.baseurl }}{{ post.url }}"><h4>{{ post.title }}</h4></a> {{ post.date | date_to_string }}
                 {{ post.excerpt }}

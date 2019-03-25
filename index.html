@@ -69,14 +69,15 @@ What's happening at (Art)ScienceBLR.
 <section class="news">
     <div class="container-fluid">
         <div class="row">
-            {% for post in site.posts %}
+            {% for post in paginator.posts %}
             <div class="col-md-5">
                 <a href="{{ site.baseurl }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
                 {% if post.image %}
                 <a href="{{ site.baseurl }}{{ post.url }}">
-                <img src="{{ site.baseurl }}{{ post.image }}" width=320>
+                <img src="{{ site.baseurl }}{{ post.image }}" style='max-width: 320px' width=320>
                 </a>
                 {% endif %}
+                <p>{{ post.date | date_to_long_string }}</p>
                 <p>
                 {{ post.excerpt }} <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
                 </p>
@@ -87,6 +88,17 @@ What's happening at (Art)ScienceBLR.
                 {% endfor %}
             </div>
             {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-2">
+                {% if paginator.previous_page %}
+                <a class='btn btn-primary' href="{{ paginator.previous_page_path }}">Newer posts</a>
+                {% endif %}
+                Page: {{ paginator.page }}
+                {% if paginator.next_page %}
+                <a class='btn btn-primary' href="{{ paginator.next_page_path }}">Older posts</a>
+                {% endif %}
+            </div>
         </div>
     </div>
 </section>
