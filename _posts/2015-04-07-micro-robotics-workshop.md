@@ -3,7 +3,7 @@ layout: workshop
 categories: [ workshop ]
 tags: [ workshop , electronics , robotics]
 title: MicroRobotics Workshop
-image: assets/img/16665439499_96f8c4949f-155x110.jpg
+image: /assets/img/16665439499_96f8c4949f-155x110.jpg
 ---
 The Extreme places and Extending Senses group conducted a microrobotics workshop for children as a part of their mobile lab project.
 <!--more-->

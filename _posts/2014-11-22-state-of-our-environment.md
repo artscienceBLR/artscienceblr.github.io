@@ -3,7 +3,7 @@ layout: workshop
 categories: [ workshop ]
 tags: [ workshop , biodesign , classes ]
 title: State of Our Environment
-image: assets/img/Puttenahalli_1-155x110.jpg
+image: /assets/img/Puttenahalli_1-155x110.jpg
 ---
 
 This workshop will be conducted by the (Art)ScienceBLR at the Srishti School of Art, Design and Technology.
