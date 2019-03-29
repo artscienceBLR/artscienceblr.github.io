@@ -2,7 +2,7 @@
 layout: workshop
 title: HackteriaLAB 2013, Bangalore
 categories: [ workshop ]
-tags: [ event, workshop ]
+tags: [ events, workshop ]
 image: /assets/img/Sachiko_hlab_13-155x110.jpg
 ---
 
@@ -23,4 +23,3 @@ Read more on Hackteria [website](http://hackteria.org/hackterialab/hackterialab-
 ![Market]({{ site.baseurl }}/assets/img/Hlab_13_market-1024x768.jpg)
 
 ![Sachiko]({{ site.baseurl }}/assets/img/Sachiko_hlab_13-1024x768.jpg)
-
