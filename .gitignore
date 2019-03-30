@@ -2,4 +2,4 @@
 .jekyll-metadata
 Makefile
 _site/
-
+Gemfile.lock
