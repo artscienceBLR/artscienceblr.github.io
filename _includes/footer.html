@@ -2,38 +2,46 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-            <h2>About</h2>
-            <div>
-            ArtScience BLR is a public laboratory at Srishti Institute of Art, Design and Technology.
-            <img src="http://srishti.ac.in/sites/default/files/srishti-logo-final.png">
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="{{ site.baseurl }}/contact/">Contact</a>
-                </div>
+            <div class="about">
+                (Art)ScienceBLR is a public laboratory at the Srishti Institute of Art, Design and Technology for artists and designers to engage with scientific practices. We look at the artistic, social and political implications of technologies from computing to biotechnologies.
             </div>
         </div>
         <div class="col-md-4">
-            <h2>Events</h2> 
-            <ul>
-                {% assign post = site.categories.event | limit: 1 %}
-                {% if post and post[0].event_date %}
-                {% assign byEventDate = site.categories.event | sort: 'event_date' %}
+            <h6>Events</h6> 
+            <ul class="events">
+                {% assign byEventDate = site.categories.event %}
                 {% for post in byEventDate limit: 3 %}
-                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} {% include date.html date=post.event_date %}</a></li>
+                <li><a href="{{ site.baseurl }}{{ post.url }}">{% include date.html date=post.date %}<br/>{{ post.title }}</a></li>
                 {% endfor %}
                 <li><a href="{{ site.baseurl }}/calendar/">Calendar of Events</a></li>
-                {% endif %}
             </ul>
         </div>
         <div class="col-md-4">
-            <h2>Social Media</h2>
-            <ul>
+            (Art)ScienceBLR <br/>
+            Srishti Institute of Art, Design and Technology (N6 Campus) <br/>
+            No 11, RWF West Colony, Yelahanka New Town <br/>
+            Bengaluru, Karnataka – 560064 <br/>
+        </div>
+      </div>
+      <div class="row last-row">
+          <div class="col-md-4">
+              <a href="http://srishti.ac.in/" class="srishti-logo">
+                <img src="http://srishti.ac.in/sites/default/files/srishti-logo-final.png">
+                Srishti Institute of Art, Design &amp; Technology
+              </a>
+          </div>
+          <div class="col-md-4">
+            &nbsp; 
+          </div>
+          <div class="col-md-4">
+            <ul class="social-media">
                 <li><a href="https://www.facebook.com/artscienceblr/"><i class="fab fa-facebook"></i> Facebook</a></li>
                 <li><a href="https://twitter.com/artscienceblr"><i class="fab fa-twitter"></i> Twitter</a></li>
                 <li><a href="https://instagram.com/artscienceblr"><i class="fab fa-instagram"></i> Instagram</a></li>
             </ul>
-        </div>
+            <br/>
+            <a href="https://artscienceblr.org/lists/?p=subscribe">Subscribe to our Newsletter</a>
+          </div>
       </div>
     </div>
 </footer>
