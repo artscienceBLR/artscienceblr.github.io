@@ -6,28 +6,19 @@ layout: default
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h1>{{ page.title }}</h1>
+                <h1 class="page-title">{{ page.title }}</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-            <b>
-            {% if page.event_date %}
-                <!--{% include date.html date=page.event_date %} -->
-                {{ page.event_date | date_to_long_string }}
-            {% else %}
-                {{ page.date | date_to_long_string }}
-            {% endif %}
-            </b>
+        <div class="row content-row">
+            <div class="col-md-9">{{ content }}</div>
+            <div class="col-md-3 post-about">
+                Date: {{ page.date | date_to_long_string }}
+                <br/>
+                {% for tag in page.tags %}
+                    {% capture tag_name %}{{ tag }}{% endcapture %}
+                    <a href="{{ site.baseurl }}/tag/{{ tag_name }}"><code class="highlighter-rouge">{{ tag_name }}</code></a>
+                {% endfor %}
             </div>
-        </div>
-        {% if page.image %}
-        <div class="row">
-            <div class="col-md-4"><img src="{{ site.baseurl }}{{ page.image }}"></div>
-        </div>
-        {% endif %}
-        <div class="row">
-            <div class="col-md-12">{{ content }}</div>
         </div>
     </div>
 </section>
