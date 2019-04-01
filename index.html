@@ -6,7 +6,7 @@ title: ArtScienceBLR a public laboratory at Srishti
 <section class="banner">
     <div class="container-fluid">
         <div class="row">
-            <div class="offset-md-1 col-md-10">
+            <div class="no-padding col-md-12">
                 <div id="carousel" class="carousel slide" data-ride="carousel">
                     <ul class="carousel-indicators">
                         <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -18,38 +18,34 @@ title: ArtScienceBLR a public laboratory at Srishti
                         <div class="carousel-item active">
                             <img class="img-responsive" src="{{ site.baseurl }}/assets/img/about.jpg">
                             <div class="carousel-caption" style="color: black;">
-                                <h5>About</h5>
                                 (Art)ScienceBLR is a public laboratory at the Srishti Institute of Art, Design and Technology for artists and designers to engage with scientific practices. 
 We look at the artistic, social and political implications of technologies from computing to biotechnologies.
                                 <br/>
-                                <a href="{{ site.baseurl }}/about/">Read more</a>
+                                <a class="btn btn-light" href="{{ site.baseurl }}/about/">Read more</a>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ site.baseurl }}/assets/img/workshops.png">
+                            <img src="{{ site.baseurl }}/assets/img/workshop.jpg">
                             <div class="carousel-caption" style="color: black;">
-                                <h5>Workshops</h5>
 We conduct Open Workshops on Saturdays at (Art)ScienceBLR for students and educators. Workshops cover a variety of topics ranging from robotics to biology, sound and analog film.
                                 <br/>
-                                <a href="{{ site.baseurl }}/workshops/">Read more</a>
+                                <a class="btn btn-light" href="{{ site.baseurl }}/workshops/">Read more</a>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ site.baseurl }}/assets/img/residency.png">
+                            <img src="{{ site.baseurl }}/assets/img/residencynew.jpg">
                             <div class="carousel-caption" style="color: black;">
-                                <h5>Residency</h5>
                                 We host artists and scientists from both India and across the globe. We offer residents accommodation and a studio space at (Art)ScienceBLR.
                                 <br/>
-                                <a href="{{ site.baseurl }}/residency/">Read more</a>
+                                <a class="btn btn-light" href="{{ site.baseurl }}/residency/">Read more</a>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ site.baseurl }}/assets/img/events.png">
+                            <img src="{{ site.baseurl }}/assets/img/events.jpg">
                             <div class="carousel-caption" style="color: black;">
-                                <h5>Events</h5>
 What's happening at (Art)ScienceBLR. 
                                 <br/>
-                                <a href="{{ site.baseurl }}/events/">Read more</a>
+                                <a class="btn btn-light" href="{{ site.baseurl }}/events/">Read more</a>
                             </div>
                         </div>
 
@@ -71,13 +67,15 @@ What's happening at (Art)ScienceBLR.
         <div class="row">
             {% for post in paginator.posts %}
             <div class="col-md-5">
-                <a href="{{ site.baseurl }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
                 {% if post.image %}
                 <a href="{{ site.baseurl }}{{ post.url }}">
                 <img src="{{ site.baseurl }}{{ post.image }}" style='max-width: 320px' width=320>
                 </a>
                 {% endif %}
-                <p>{{ post.date | date_to_long_string }}</p>
+                <br/>
+                <br/>
+                <a href="{{ site.baseurl }}{{ post.url }}"><h6>{{ post.title }}</h6></a>
+                <!--<p>{{ post.date | date_to_long_string }}</p>-->
                 <p>
                 {{ post.excerpt }} <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
                 </p>

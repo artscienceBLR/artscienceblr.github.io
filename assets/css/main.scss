@@ -113,6 +113,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     right: 40px;
     left: initial;
     width: 25%;
+    top: 50%;
+    font-size: 18px;
+    text-align: left;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 footer {
@@ -290,3 +295,55 @@ footer a {
     color: white;
     padding: 5px;
 }
+
+.no-padding {
+    padding: 0;
+}
+
+.carousel-caption {
+    a {
+        margin-top: 30px;
+        font-size: 18px;
+        border: 1px solid black;
+    }
+}
+
+footer {
+    div.container {
+        padding-top: 30px;
+    }
+    //background-image: url("/assets/img/redfooter.jpg");
+    //background-repeat: no-repeat;
+}
+
+.last-row {
+    border-top: 1px solid grey;
+    padding-top: 10px;
+}
+
+ul.social-media li {
+    display: inline;
+}
+
+div.about {
+    font-size: 18px;
+    color: grey;
+}
+
+ul.events {
+    list-style-type: none;
+    padding-left: 0px;
+    li {
+         border-bottom: 1px solid grey;
+    }
+}
+
+.srishti-logo {
+    text-align: center;
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

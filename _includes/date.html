@@ -7,5 +7,5 @@
     {% when '3' or '23' %}{{ day }}rd
     {% else %}{{ day }}th
 {% endcase %},
-{{ include.date | date: "%Y %I:%M %P" }}
+{{ include.date | date: "%Y" }}
 
