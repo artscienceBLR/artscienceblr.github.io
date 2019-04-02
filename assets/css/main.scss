@@ -321,9 +321,16 @@ footer {
     padding-top: 10px;
 }
 
-ul.social-media li {
-    display: inline;
+ul.social-media {
+    margin-bottom: 30px;
+    li {
+        display: inline;
+    }
 }
+
+//ul.social-media li {
+//    display: inline;
+//}
 
 div.about {
     font-size: 18px;
@@ -369,3 +376,4 @@ section.category-section {
     top: 50%;
     padding-top: 80px;
 }
+
