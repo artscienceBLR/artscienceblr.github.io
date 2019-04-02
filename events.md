@@ -3,9 +3,8 @@ layout: category
 title: Events
 type: event
 permalink: /events/
+image: /assets/img/events-cat.png
 ---
-
-# Events 
 
 Quam. Aliquam neque. Nam nunc nunc, lacinia sed, varius quis, iaculis
 eget, ante. Nulla dictum justo eu lacus. Phasellus sit amet quam. Nullam

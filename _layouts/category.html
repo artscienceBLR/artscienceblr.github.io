@@ -3,22 +3,31 @@ layout: default
 ---
 <section class="{{ page.type }}-jumbo">
     <div class="container-fluid">
-        <div class="row justify-content-md-center">
-            <div class="col-md-6 offset-md-2">
+        <div class="row justify-content-md-end">
+            {% if page.image %}
+            <div class="col-md-8">
+                <img src="{{ site.baseurl }}{{ page.image }}">
+            </div>
+            {% endif %}
+            <div class="col-md-4 category-blurb">
                 {{ content }}
             </div>
         </div>
     </div>
 </section>
 
-<section class="{{ page.type }}s">
+<section class="category-section {{ page.type }}s">
     <div class="container-fluid">
         <div class="row">
             {% for post in site.categories[page.type] %}
             <div class="col-md-6">
                 {% if post.image %}
+                <a href="{{ site.baseurl }}{{ post.url }}">
                 <img src="{{ site.baseurl }}{{ post.image }}" style="max-width: 320px;">
+                </a>
                 {% endif %}
+                <br/>
+                <br/>
                 <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
                 {{ post.excerpt }}
             </div>

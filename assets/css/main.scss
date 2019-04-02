@@ -335,6 +335,7 @@ ul.events {
     padding-left: 0px;
     li {
          border-bottom: 1px solid grey;
+         padding-top: 10px;
     }
 }
 
@@ -357,4 +358,13 @@ ul.events {
 
 .post-about {
     padding-top: 30px;
+}
+
+section.category-section {
+    padding-top: 20px;
+}
+
+.category-blurb {
+    top: 50%;
+    padding-top: 80px;
 }
