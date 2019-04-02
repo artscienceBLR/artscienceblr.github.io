@@ -31,7 +31,8 @@ tincidunt, elit erat suscipit arcu, in varius erat risus.</p>
 
     {% for post in site.categories.residency %}
         {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-        {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+        {% assign next_index = forloop.index + 1 %}
+        {% capture next_year %}{{ site.categories.residency[next_index].date | date: "%Y" }}{% endcapture %}
         {% if forloop.first %}
         <div class="row">
             <div class="col-md-4">
@@ -53,7 +54,7 @@ tincidunt, elit erat suscipit arcu, in varius erat risus.</p>
             </div>
         </div>
         {% unless forloop.last %}
-            {% if this_year != next_year %}
+           {% if this_year != next_year %}
             <div class="row">
                 <div class="col-md-4">
                     <h3>{{ next_year }}</h3>
