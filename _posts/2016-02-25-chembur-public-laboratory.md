@@ -20,4 +20,4 @@ At the end of the  DIYlab workshop at HBCSE, TIFR, Mumbai, we brought out all th
 ![chemburlab11]({{site.baseurl}}/assets/img/05-DSC_0180.jpg)
 ![chemburlab12]({{site.baseurl}}/assets/img/27-DSC_0210.jpg)
 
-Pingback: [biodesign @GOSH!2016 CERN | biodesign for the real world](http://biodesign.cc/2016/03/16/biodesign-gosh2016-cern/)
+Pingback: [biodesign @GOSH!2016 CERN &#124; biodesign for the real world](http://biodesign.cc/2016/03/16/biodesign-gosh2016-cern/)
