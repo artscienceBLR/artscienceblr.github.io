@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: residency
 categories: [ residency ]
 title: Alexandra Daisy Ginsberg - residency at (Art)ScienceBLR
 image: /assets/img/Daisy-155x110.jpg

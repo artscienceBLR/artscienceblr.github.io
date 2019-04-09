@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: residency
 categories: [ residency ]
 tags: [ visiting-artists ]
 title: Wolfgang Spahn - Resident at ArtScienceBLR
