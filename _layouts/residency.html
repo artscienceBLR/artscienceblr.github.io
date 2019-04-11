@@ -10,18 +10,16 @@ layout: default
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                {{ page.date | date_to_long_string }}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                {% if page.image %}
-                <img width=420 src="{{ site.baseurl }}{{ page.image }}">
-                {% endif %}
-            </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 {{ content }}
+            </div>
+            <div class="col-md-3">
+                Date: {{ page.date | date_to_long_string }} 
+                <br/>
+                {% for tag in page.tags %}
+                    {% capture tag_name %}{{ tag }}{% endcapture %}
+                    <a href="{{ site.baseurl }}/tag/{{ tag_name }}"><code class="highlighter-rouge">{{ tag_name }}</code></a>
+                {% endfor %}
             </div>
         </div>
     </div>

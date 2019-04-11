@@ -5,9 +5,11 @@ title: Residency
 ---
 
 <section class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Residencies</h1>
+    <div class="row justify-content-md-end">
+        <div class="col-md-8">
+            <img src="{{ site.baseurl }}/assets/img/residency-placeholder.png">
+        </div>
+        <div class="col-md-4">
 <p>Quisque nisi. Suspendisse id risus nec nisi ultrices ornare. Donec eget
 tellus. Nullam molestie placerat felis. Aenean facilisis. Nunc erat. Integer in
 tellus. Mauris volutpat, neque vel ornare porttitor, dolor nisi sagittis dolor,
@@ -15,7 +17,6 @@ sit amet bibendum orci leo blandit lacus.</p>
 
 <p>In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem.
 Mauris volutpat congue risus. Curabitur leo. Aenean tempor tortor.</p>
-
         </div>
     </div>
 
@@ -30,18 +31,7 @@ tincidunt, elit erat suscipit arcu, in varius erat risus.</p>
     </div>
 
     {% for post in site.categories.residency %}
-        {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-        {% assign next_index = forloop.index + 1 %}
-        {% capture next_year %}{{ site.categories.residency[next_index].date | date: "%Y" }}{% endcapture %}
-        {% if forloop.first %}
-        <div class="row">
-            <div class="col-md-4">
-                <h3>{{ this_year }}</h3>
-            </div>
-        </div>
-        {% endif %}
-        
-        <div class="row">
+        <div class="row residency-row">
             <div class="col-md-4">
                 {% if post.image %}
                 <img width=320 src="{{ site.baseurl }}{{ post.image }}">
@@ -53,15 +43,6 @@ tincidunt, elit erat suscipit arcu, in varius erat risus.</p>
                 {{ post.excerpt }}
             </div>
         </div>
-        {% unless forloop.last %}
-           {% if this_year != next_year %}
-            <div class="row">
-                <div class="col-md-4">
-                    <h3>{{ next_year }}</h3>
-                </div>
-            </div>
-            {% endif %}
-        {% endunless %}
     {% endfor %}
 </section>
 
